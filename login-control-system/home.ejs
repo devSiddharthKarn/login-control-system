@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav-bar {
+            background-color: aqua;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        a {
+            transition: transform 0.3s ease;
+        }
+
+        a:hover {
+            transform:scale(1.2);
+        }
+
+        a {
+            margin: 20px;
+            border: 1px solid black;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <label><img src="brand">BRAND</label>
+        <div class="action">
+            <a href="services">Services</a>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            
+        </div>
+    </div>
+    <h1>Hello <%= message%>!</h1>
+    <br>
+    Welcome to the home page!!!
+</body>
+</html>

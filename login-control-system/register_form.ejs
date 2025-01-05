@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            const password = document.getElementById("password");
+            const toggleButton = document.getElementById("view");
+
+            toggleButton.addEventListener("click",(event)=>{
+                event.preventDefault();
+                if(password.type==="password"){
+                    password.type="text";
+                    toggleButton.innerText="Hide";
+                    console.log("Set the password type to text");
+                }else{
+                    password.type="password";
+                    console.log("password type set to password");
+                    toggleButton.innerText="View";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+         <%= message %>
+
+    <form method="post" action="/temp">
+        <label for="username">username:</label><input type="text" required id="username" name="username"><br>
+        <label for="password">password:</label><input type="password" required id="password" name="password"><button id="view" type="button">View</button><br>
+        <button type="submit">Submit</button><button type="reset">Reset</button>
+    </form>
+</body>
+</html>

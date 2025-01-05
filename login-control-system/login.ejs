@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            border:1px solid black;
+            color:black;
+            text-decoration: none;
+        }
+    </style>
+
+
+    <script >
+        document.addEventListener("DOMContentLoaded",()=>{
+            const form = document.querySelector("form");
+            const password = document.getElementById("password");
+            const toggleButton = document.getElementById("view");
+
+            form.addEventListener("submit",(event)=>{
+                const check = confirm("Are you sure want to submit the form");
+                if(!check){
+                    event.preventDefault();
+                    console.log("user not ready to submit the login form");
+                }else{
+                    console.log("user submitted the login form");
+                }
+            });
+
+            toggleButton.addEventListener("click",(event)=>{
+                event.preventDefault();
+                if(password.type=="password"){
+                    password.type=="text";
+                    toggleButton.innerText="Hide";
+                    
+                }else{
+                    password.type=="password";
+                    toggleButton.innertext="Show";
+                }
+            });
+        })
+
+    </script>
+</head>
+<body>
+    
+    <%= message %>    
+    <form method="post" action="/home">
+        <label for="username">username:</label><input type="text" required id="username" name="username"><br>
+
+        <label for="password">password:</label>
+        <input type="password" required id="password" name="password"><button id="view">View</button>
+
+        <button type="submit" onclick="check(event)">Login</button>
+    </form><br>
+
+
+    <h3>Not registered ?? Click here to register yourself</h3><br>
+    <a href="/register">Register</a>
+</body>
+</html>

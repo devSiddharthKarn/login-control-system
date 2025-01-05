@@ -1,0 +1,6 @@
+***DEVELOPED BY SIDDHARTH KARN ****
+
+This is an advanced log-control system made with nodejs,expressjs,sql and bcryptjs.
+
+Features advanced database storage of login credentials with hashing and encryption to ensure the safety of details and harden the prediction. Currently hashing is applied to the password only.
+
